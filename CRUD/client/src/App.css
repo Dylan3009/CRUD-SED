@@ -1,0 +1,47 @@
+.source-game {
+  text-align: center;
+}
+
+.label_text {
+  color: black;
+  padding-top: 30px;
+  align-items: center;
+  justify-content: left;
+  font-size: 25px;
+}
+
+.input_text {
+  background: transparent;
+  padding: 10px;
+  font-size: 25px;
+  border-color: rgb(0, 0, 0);
+  outline: none;
+  color: black;
+  width: 30%;
+  height: 10px;
+  margin: 10px;
+  resize: none;
+}
+
+.div-button {
+  text-align: center;
+  display:inline;
+}
+
+.send-button {
+  width: 150px;
+  height: 2rem;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  border-style: none; 
+  border-radius: 10px;
+}
+
+.send-button:hover {
+  background-color: rgb(36, 36, 36);
+}
+
+.send-button:active {
+  background-color: #FFFFFF;
+  color: #000000;
+}
