@@ -29,6 +29,10 @@ function App() {
     });
   };
 
+  const deleteCountry = (id) => {
+    Axios.delete(`http://localhost:3001/delete/${id}`);
+  };
+
   return (
     <div>
       <div className="source-game">
@@ -63,7 +67,9 @@ function App() {
               >
                 Update
               </button>
-              <button className="send-button">
+              <button className="send-button"
+                onClick={() => deleteCountry(val._id)}
+              >
                 Delete
               </button>
             </div>
