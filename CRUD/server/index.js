@@ -35,6 +35,22 @@ app.get("/read", async (req, res) => {
     });
 });
 
+app.put("/update", async (req, res) => {
+
+    const newCountryName = req.body.newCountryName;
+    const id = req.body.id;
+
+    try {
+        await CountryModel.findById(id, (err,updatedCountry) => {
+            updatedCountry.countryName = newCountryName;
+            updatedCountry.save();
+            res.send("update");
+        })
+    } catch (err) {
+        console.log(err);
+    }
+});
+
 app.listen(3001, () => {
     console.log("Server running 3001");
 });

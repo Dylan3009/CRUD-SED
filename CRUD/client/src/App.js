@@ -22,6 +22,13 @@ function App() {
     });
   };
 
+  const updateCountry = (id) => {
+    Axios.put("http://localhost:3001/update", {
+      id: id,
+      newCountryName: newCountryName,
+    });
+  };
+
   return (
     <div>
       <div className="source-game">
@@ -48,11 +55,11 @@ function App() {
               <input className="input_text"
                 type="text" placeholder="New Country"
                 onChange={(event) => {
-                  setCountryName(event.target.value);
+                  setNewCountryName(event.target.value);
                 }}
               />
               <button className="send-button"
-                onClick={updateCountry}
+                onClick={() => updateCountry(val._id)}
               >
                 Update
               </button>
